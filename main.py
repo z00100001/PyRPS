@@ -1,7 +1,7 @@
 import random
 
 count = 0
-choices = ["Rock", "Paper", "Scissors"]
+choices = ["rock", "paper", "scissors"]
 
 
 def game_start():
@@ -11,19 +11,19 @@ def game_start():
     ai_choice_str = choices[ai_choice]
 
     print("What is your choice? (Rock, Paper, Scissors)")
-    user_choice = input()
+    user_choice = input().lower()
 
     while user_choice not in choices:
         print("Invalid choice. Please select Rock, Paper, or Scissors.")
-        user_choice = input()
+        user_choice = input().lower()
 
     print("AI chose {}".format(ai_choice_str))
 
     if user_choice == ai_choice_str:
         print("Tie!")
-    elif (user_choice == "Rock" and ai_choice_str == "Scissors") or \
-            (user_choice == "Paper" and ai_choice_str == "Rock") or \
-            (user_choice == "Scissors" and ai_choice_str == "Paper"):
+    elif (user_choice == "rock" and ai_choice_str == "scissors") or \
+            (user_choice == "paper" and ai_choice_str == "rock") or \
+            (user_choice == "scissors" and ai_choice_str == "paper"):
         print("You Won! Thank you for playing!")
         winrate = 1 
     else:
