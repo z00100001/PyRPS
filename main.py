@@ -24,7 +24,7 @@ def game_start():
     elif (user_choice == "Rock" and ai_choice_str == "Scissors") or \
             (user_choice == "Paper" and ai_choice_str == "Rock") or \
             (user_choice == "Scissors" and ai_choice_str == "Paper"):
-        print("You Won! Thank you for playing.")
+        print("You Won! Thank you for playing!")
         winrate = 1 
     else:
         print("AI Won!")
